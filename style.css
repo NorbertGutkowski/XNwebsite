@@ -1,0 +1,266 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, rgb(0, 9, 17) 0%, rgb(0, 18, 34) 50%, rgb(1, 31, 61) 100%);
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Inter', sans-serif;
+}
+
+body, html a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'twitch';
+  src: url('files/Twitchy.TV.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.name {
+  max-width: 920px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 16px;
+  position: relative;
+}
+
+.profile_img {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #7375ff;
+}
+
+.profile_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.twitch_name {
+  flex: 1 1 auto;
+  min-width: 200px;
+  margin-left: 16px;
+}
+
+.twitch_name .name_text {
+  font-family: 'twitch';
+  font-size: 25px;
+  color: white;
+  -webkit-text-stroke: 2px #7151b6;
+}
+
+.twitch_name .business_text {
+  color: rgb(184, 184, 184);
+  letter-spacing: -1px;
+}
+
+.twitch_name .mail_text {
+  color: white;
+  letter-spacing: -1px;
+}
+
+.socials {
+  width: auto; /* lub max-width: 400px; */
+  max-width: 400px;
+  height: 150px;
+  display: flex;
+  justify-content: flex-end; /* wyśrodkowane do prawej */
+  align-items: center;
+  gap: 10px; /* odstęp między ikonami */
+  margin-left: auto; /* żeby wypchnąć na prawo */
+  margin-right: 0;
+  /* usunięty float */
+}
+
+.social_ico {
+  width: 70px;
+  height: 55px;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid #7375ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.social_ico img {
+  width: 25px;
+  height: 25px;
+}
+
+.social_ico:hover {
+  background-color: rgb(19, 19, 19);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  max-width: 920px;
+  margin: 20px auto 0 auto;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right, transparent, #43449e, #54558b, #43449e, transparent) 1;
+}
+
+.content a {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+}
+
+.content_item {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(90deg, rgb(0, 16, 31) 0%, rgb(1, 26, 51) 100%);
+  border: 2px solid #3a3c8a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.content_item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px 0px rgb(55, 58, 95);
+  cursor: pointer;
+}
+
+.content_item img {
+  width: 80px;
+  height: 80px;
+  margin-left: 30px;
+}
+
+.text_content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.content_item .content_name {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content_item .desc {
+  color: rgb(158, 158, 158);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  height: 269px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  letter-spacing: -1px;
+  color: rgb(184, 184, 184);
+}
+
+.footer a {
+  color: rgb(80, 80, 80);
+}
+
+.footer a:hover {
+  color: rgb(33, 33, 33);
+}
+
+
+@media (max-width: 1080px) {
+  .name {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .socials {
+  width: auto;
+  height: 150px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;margin: auto;
+  justify-items: center;
+  }
+
+  .content a {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: block;
+  }
+
+  .content_item {
+    width: auto;
+    height: auto;
+    padding: 20px 10px;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content_item img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .text_content {
+    margin-left: 0;
+  }
+
+  .content_item .content_name {
+    font-size: 24px;
+  }
+
+  .content_item .desc {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .social_ico {
+    width: 50px;
+    height: 45px;
+  }
+
+  .social_ico img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .content_item .content_name {
+    font-size: 20px;
+  }
+
+  .content_item .desc {
+    font-size: 13px;
+  }
+}
