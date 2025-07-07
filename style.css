@@ -182,6 +182,7 @@ body, html a {
   font-family: 'Inter';
   letter-spacing: -1px;
   color: rgb(184, 184, 184);
+  position: relative;
 }
 
 .footer a {
